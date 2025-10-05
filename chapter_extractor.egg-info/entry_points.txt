@@ -1,0 +1,2 @@
+[console_scripts]
+chapter-extractor = chapter_extractor.cli:main

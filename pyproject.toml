@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chapter-extractor"
+dynamic = ["version"]
+description = "A Python package for extracting chapters from HTML files and converting them to Markdown format"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Neel Baronia", email = "neelbaronia@example.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "beautifulsoup4>=4.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[project.scripts]
+chapter-extractor = "chapter_extractor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/neelbaronia/chapter-extractor"
+Repository = "https://github.com/neelbaronia/chapter-extractor"
+Issues = "https://github.com/neelbaronia/chapter-extractor/issues"
+
+[tool.setuptools_scm]
+write_to = "chapter_extractor/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chapter_extractor*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

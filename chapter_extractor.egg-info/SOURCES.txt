@@ -1,0 +1,15 @@
+LICENSE
+README.md
+extract_chapters.py
+pyproject.toml
+chapter_extractor/__init__.py
+chapter_extractor/_version.py
+chapter_extractor/cli.py
+chapter_extractor/extractor.py
+chapter_extractor.egg-info/PKG-INFO
+chapter_extractor.egg-info/SOURCES.txt
+chapter_extractor.egg-info/dependency_links.txt
+chapter_extractor.egg-info/entry_points.txt
+chapter_extractor.egg-info/requires.txt
+chapter_extractor.egg-info/top_level.txt
+tests/test_extractor.py
